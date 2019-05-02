@@ -31,6 +31,7 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
+  Rails.application.routes.default_url_options[:host] = 'https://arcane-caverns-26717.herokuapp.com'
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
@@ -83,5 +84,16 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { :host => "https://arcane-caverns-26717.herokuapp.com" }
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com'
+  }
+
+  ActionMailer::Base.delivery_method = :smtp
+  
+  config.action_mailer.default_url_options = { :host => 'https://arcane-caverns-26717.herokuapp.com' }
 end
