@@ -22,6 +22,6 @@ test:
   adapter: sqlite3
   database: db/test.sqlite3
 
-production:
-  <<: *default
+# production:
+  # <<: *default
   # database: db/production.sqlite3
