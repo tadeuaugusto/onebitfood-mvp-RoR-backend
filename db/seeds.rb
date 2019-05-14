@@ -17,17 +17,17 @@ path_image = 'public/images/categories/mexican.jpg'
 c = Category.create(id: 1, title: 'mexicana')
 c.image.attach(io: File.open(path_image), filename: 'mexican.jpg')
 
-path_image = 'public/images/categories/italian.jpeg'
+path_image = 'public/images/categories/italian.jpg'
 c = Category.create(id: 2, title: 'italiana')
-c.image.attach(io: File.open(path_image), filename: 'italian.jpeg')
+c.image.attach(io: File.open(path_image), filename: 'italian.jpg')
 
-path_image = 'public/images/categories/japonese.jpeg'
+path_image = 'public/images/categories/japonese.jpg'
 c = Category.create(id: 3, title: 'japonesa')
-c.image.attach(io: File.open(path_image), filename: 'japonese.jpeg')
+c.image.attach(io: File.open(path_image), filename: 'japonese.jpg')
 
-path_image = 'public/images/categories/vegan.jpeg'
+path_image = 'public/images/categories/vegan.jpg'
 c = Category.create(id: 4, title: 'vegana')
-c.image.attach(io: File.open(path_image), filename: 'vegan.jpeg')
+c.image.attach(io: File.open(path_image), filename: 'vegan.jpg')
 
 
 path_image = 'public/images/categories/peruvian.jpg'
@@ -38,7 +38,7 @@ c.image.attach(io: File.open(path_image), filename: 'peruana.jpg')
 puts 'Cadastrando Restaurantes'
 
 # Mexican Restaurants
-path_image = 'public/images/restaurants/1.jpeg'
+path_image = 'public/images/restaurants/1.jpg'
 r = Restaurant.create!(
   name: 'Los Sombreros',
   description: 'Nossa missão tem sido ajudar as pessoas a alcançar seus objetivos de saúde e bem-estar. Embora tenhamos mudado ao longo dos anos, nossos valores permaneceram os mesmos.',
@@ -51,9 +51,9 @@ pc = ProductCategory.create!(title: 'Pratos Mexicanos', restaurant: r)
 prod = Product.create!(name: 'Nacho Guacamole', price: 19, description: 'Tortilhas com Guacamole',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/nachosg.jpg'), filename: 'nachosg.jpg')
 prod = Product.create!(name: 'Nacho', price: 19, description: 'Tortilhas com milho', product_category: pc)
-prod.image.attach(io: File.open('public/images/products/nachosg2.jpeg'), filename: 'nachosg2.jpeg')
+prod.image.attach(io: File.open('public/images/products/nachosg2.jpg'), filename: 'nachosg2.jpg')
 
-path_image = 'public/images/restaurants/2.jpeg'
+path_image = 'public/images/restaurants/2.jpg'
 r = Restaurant.create!(
   name: 'Ola Que Tal',
   description: 'Para alcançar e manter essa distinção em comida e vinho, serviço, ambiente e ambiente, o restaurante ganha reputação de primeira classe por gastronomia, hospitalidade graciosa e informada, conforto e beleza que atraem clientes novos e repetidos ano após ano.',
@@ -66,10 +66,10 @@ pc = ProductCategory.create!(title: 'Pratos Mexicanos', restaurant: r)
 prod = Product.create!(name: 'Burrito', price: 19, description: 'Tortilhas com Guacamole',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/bt.jpg'), filename: 'bt.jpg')
 prod = Product.create!(name: 'Quesadilha', price: 25, description: 'Tortilhas de queijo',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/quesa.jpeg'), filename: 'quesa.jpeg')
+prod.image.attach(io: File.open('public/images/products/quesa.jpg'), filename: 'quesa.jpg')
 
 # Italian Restaurants
-path_image = 'public/images/restaurants/3.jpeg'
+path_image = 'public/images/restaurants/3.jpg'
 r = Restaurant.create!(
   name: 'Bravo',
   description: 'Estamos empenhados em usar os melhores ingredientes em nossas receitas. Nenhum alimento deixa a nossa cozinha que nós mesmos não comeríamos.',
@@ -84,7 +84,7 @@ prod.image.attach(io: File.open('public/images/products/berinjela.jpg'), filenam
 prod = Product.create!(name: 'Fritas', price: 35, description: 'Bata frita com bacon',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/fritas.jpg'), filename: 'fritas.jpg')
 
-path_image = 'public/images/restaurants/4.jpeg'
+path_image = 'public/images/restaurants/4.jpg'
 r = Restaurant.create!(
   name: 'La Pergoletti',
   description: 'Nossa missão é estabelecer relações comerciais benéficas com diversos fornecedores que compartilham nosso compromisso com o atendimento ao cliente, qualidade e preços competitivos.',
@@ -100,7 +100,7 @@ prod = Product.create!(name: 'Fogazza A moda da Casa', price: 12, description: '
 prod.image.attach(io: File.open('public/images/products/fogazza.jpg'), filename: 'fogazza.jpg')
 
 # Japonese Restaurants
-path_image = 'public/images/restaurants/5.jpeg'
+path_image = 'public/images/restaurants/5.jpg'
 r = Restaurant.create!(
   name: 'Sushi Eterno',
   description: 'Existimos para garantir que cada hóspede receba um serviço rápido, profissional, amigável e cortês.',
@@ -111,11 +111,11 @@ r = Restaurant.create!(
 r.image.attach(io: File.open(path_image), filename: '5.jpg')
 pc = ProductCategory.create!(title: 'Entrada', restaurant: r)
 prod = Product.create!(name: 'Temaki', price: 19.99, description: 'Enrolado de arroz com alga marinha em forma de cone',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/temaki.jpeg'), filename: 'temaki.jpeg')
+prod.image.attach(io: File.open('public/images/products/temaki.jpg'), filename: 'temaki.jpg')
 prod = Product.create!(name: 'Sashimi', price: 30.90, description: 'Peixe cru fatiado, salmao, atum e peixe prego',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/sashimi.jpg'), filename: 'sashimi.jpg')
 
-path_image = 'public/images/restaurants/6.jpeg'
+path_image = 'public/images/restaurants/6.jpg'
 r = Restaurant.create!(
   name: 'Okuyamah',
   description: 'Restaurante conceituado, vencedor por 5 vezes como melhor restaurante Japones de São Paulo.',
@@ -131,7 +131,7 @@ prod = Product.create!(name: 'Hot roll - 10 unidades', price: 12, description: '
 prod.image.attach(io: File.open('public/images/products/hot-holl.jpg'), filename: 'hot-holl.jpg')
 
 # Vegan Restaurants
-path_image = 'public/images/restaurants/7.jpeg'
+path_image = 'public/images/restaurants/7.jpg'
 r = Restaurant.create!(
   name: 'Club Life',
   description: 'NOSSA ESPECIALIDADE. pratos vegetais de alta qualidade,com opções de alimentos integrais, sem glúten e sem lactose.',
@@ -144,9 +144,9 @@ pc = ProductCategory.create!(title: 'Saladas, molhos e wraps', restaurant: r)
 prod = Product.create!(name: 'Coleslaw', price: 8.99, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/coleslaw.jpg'), filename: 'coleslaw.jpg')
 prod = Product.create!(name: 'Side salad', price: 9.90, description: 'Mix de folhas com cenoura ralada, tomatinho sweet e semente de girassol.',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/side-salad.jpeg'), filename: 'side-salad.jpeg')
+prod.image.attach(io: File.open('public/images/products/side-salad.jpg'), filename: 'side-salad.jpg')
 
-path_image = 'public/images/restaurants/8.jpeg'
+path_image = 'public/images/restaurants/8.jpg'
 r = Restaurant.create!(
   name: 'Casa Natural',
   description: 'Oferecemos, desde 1981, refeições ovo-lacto-vegetarianas, leves, saudáveis, balanceadas e principalmente saborosas, procurando aliar o sabor, a qualidade de vida e o bem-estar dos clientes.',
@@ -159,4 +159,4 @@ pc = ProductCategory.create!(title: 'Saladas, molhos e wraps', restaurant: r)
 prod = Product.create!(name: 'Salada de quinoa', price: 20.90, description: 'Alface americana, roxa, frisee, quinoa cozida, cenoura, tomate, damasco dessecado, amendoa crua.',  product_category: pc)
 prod.image.attach(io: File.open('public/images/products/salada-de-quinoa.jpg'), filename: 'salada-de-quinoa.jpg')
 prod = Product.create!(name: 'Coleslaw', price: 11, description: 'Repolho roxo, couve, cenoura, cebola, maionese de castanha e xylitol',  product_category: pc)
-prod.image.attach(io: File.open('public/images/products/coleslaw2.jpeg'), filename: 'coleslaw2.jpeg')
+prod.image.attach(io: File.open('public/images/products/coleslaw2.jpg'), filename: 'coleslaw2.jpg')
